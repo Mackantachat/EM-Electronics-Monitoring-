@@ -1,0 +1,142 @@
+/*Custom for login page*/
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    img {
+        width: 17%;
+    }
+
+    .container {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .main {
+        width: 38%;
+        height: 285px;
+        margin: 30px auto 0;
+        padding: 50px 30px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .input div:first-child {
+        text-align: right;
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    img {
+        width: 25%;
+    }
+
+    .container {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .main {
+        width: 50%;
+        height: 285px;
+        margin: 30px auto 0;
+        padding: 50px 30px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .input div:first-child {
+        text-align: right;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    img {
+        width: 50%;
+    }
+
+    .container {
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+
+    .main {
+        width: 90%;
+        height: 400px;
+        margin: 30px auto 0;
+        padding: 50px 30px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    img {
+        width: 50%;
+    }
+
+    .container {
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+
+    .main {
+        width: 90%;
+        height: 400px;
+        margin: 30px auto 0;
+        padding: 50px 30px;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+body {
+    font-family: Sarabun, sans-serif;
+    background: url(../../../resources_constant/images/00_Login-bg.jpg) no-repeat center center fixed;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.text-white {
+    color: white;
+}
+
+.input {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #184b9f;
+}
+
+    .btn-primary:focus,
+    .btn-primary.focus {
+        color: #fff;
+        background-color: #002a6e;
+        border-color: #122b40;
+    }
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #002a6e;
+        border-color: #204d74;
+    }
+
+#code {
+    background: url(../../../resources_constant/images/_justice.png) #fff;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 98% center;
+}
+
+#username {
+    background: url(../../../resources_constant/images/_user.png) #fff;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 98% center;
+}
+
+#password {
+    background: url(../../../resources_constant/images/_password.png) #fff;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 98% center;
+}

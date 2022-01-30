@@ -1,0 +1,1400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{3BD22643-B86A-46F3-AAE6-1682EB19B3AE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EM</RootNamespace>
+    <AssemblyName>EM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>EM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>EM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="area\add_prohibited_area.aspx" />
+    <Content Include="area\add_prohibited_group.aspx" />
+    <Content Include="area\prohibited_area.aspx" />
+    <Content Include="area\prohibited_group.aspx" />
+    <Content Include="control\device.aspx" />
+    <Content Include="control\LineNotifications.aspx" />
+    <Content Include="control\location.aspx" />
+    <Content Include="control\login.aspx" />
+    <Content Include="control\map.aspx" />
+    <Content Include="control\phohibited.aspx" />
+    <Content Include="control\probationer.aspx" />
+    <Content Include="control\UploadFile.aspx" />
+    <Content Include="control\user.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="device\add_em_device.aspx" />
+    <Content Include="device\em_device.aspx" />
+    <Content Include="home\allhome.aspx" />
+    <Content Include="location\add_district.aspx" />
+    <Content Include="location\add_province.aspx" />
+    <Content Include="location\add_subdistrict.aspx" />
+    <Content Include="location\district.aspx" />
+    <Content Include="location\province.aspx" />
+    <Content Include="location\subdistrict.aspx" />
+    <Content Include="map\map.aspx" />
+    <Content Include="probationer\add_probationer.aspx" />
+    <Content Include="probationer\probationer.aspx" />
+    <Content Include="report\report_breaking_rules.aspx" />
+    <Content Include="report\report_em.aspx" />
+    <Content Include="report\report_em_status.aspx" />
+    <Content Include="report\report_notification.aspx" />
+    <Content Include="report\report_probationer_details.aspx" />
+    <Content Include="report\report_tracking.aspx" />
+    <Content Include="report\report_user_access.aspx" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.min.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker3.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker3.min.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\js\bootstrap-datepicker-custom.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker-en-CA.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ar-tn.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.bn.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.br.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-CA.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-IE.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-NZ.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-ZA.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hi.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.km.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.oc.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.si.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ta.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.tg.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.tk.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.uz-cyrl.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.uz-latn.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\conf.py" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\requirements.txt" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\demo_head.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\markup_component.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\markup_daterange.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\markup_inline.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\markup_input.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\option_calendarweeks.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\option_clearbtn.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\option_daysofweekdisabled.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\option_enddate.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\option_language.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\option_multidate.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\option_startdate.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\option_todaybtn.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\option_todayhighlight.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\option_weekstart.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\script\common.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\script\common.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\script\debug.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\script\html-imports.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_screenshots\script\screenshot.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\demo_head.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\markup_component.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\markup_daterange.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\markup_inline.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\markup_input.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\option_calendarweeks.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\option_clearbtn.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\option_daysofweekdisabled.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\option_enddate.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\option_language.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\option_multidate.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\option_startdate.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\option_todaybtn.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\option_todayhighlight.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\_static\screenshots\option_weekstart.png" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\Gruntfile.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker-en-CA.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.ar-tn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.az.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.bn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.br.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.bs.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.da.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.de.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.el.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.en-AU.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.en-CA.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.en-GB.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.en-IE.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.en-NZ.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.en-ZA.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.eo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.es.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.et.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.eu.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.fo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.fr-CH.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.he.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.hi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.hy.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.id.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.is.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.it-CH.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.it.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.kh.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.km.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.ko.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.me.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.mn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.no.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.oc.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.si.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.sr-latin.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.sr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.ta.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.tg.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.th.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.tk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.uz-cyrl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.uz-latn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\assets\coverage.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\assets\jquery-1.7.1.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\assets\mock.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\assets\qunit-logging.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\assets\qunit.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\assets\qunit.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\assets\utils.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\calendar-weeks.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\component.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\data-api.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\events.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\formats.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\inline.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\keyboard_navigation\2011.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\keyboard_navigation\2012.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\keyboard_navigation\all.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\methods.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\methods_jquery.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\mouse_navigation\2011.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\mouse_navigation\2012.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\mouse_navigation\all.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\noconflict.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\options.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\timezone.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\suites\touch_navigation\all.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\tests.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\timezone.html" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\datatables.net-bs\css\dataTables.bootstrap.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\datatables.net-bs\css\dataTables.bootstrap.min.css" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\datatables.net-bs\js\dataTables.bootstrap.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\datatables.net-bs\js\dataTables.bootstrap.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\datatables.net\js\jquery.dataTables.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\datatables.net\js\jquery.dataTables.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\af.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ar-dz.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ar-kw.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ar-ly.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ar-ma.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ar-sa.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ar-tn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ar.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\az.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\be.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\bg.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\bm.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\bn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\bo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\br.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\bs.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ca.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\cs.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\cv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\cy.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\da.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\de-at.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\de-ch.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\de.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\dv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\el.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\en-au.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\en-ca.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\en-gb.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\en-ie.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\en-il.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\en-nz.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\en-SG.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\eo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\es-do.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\es-us.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\es.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\et.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\eu.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\fa.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\fi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\fo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\fr-ca.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\fr-ch.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\fr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\fy.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ga.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\gd.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\gl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\gom-latn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\gu.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\he.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\hi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\hr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\hu.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\hy-am.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\id.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\is.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\it-ch.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\it.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ja.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\jv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ka.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\kk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\km.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\kn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ko.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ku.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ky.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\lb.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\lo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\lt.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\lv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\me.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\mi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\mk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ml.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\mn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\mr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ms-my.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ms.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\mt.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\my.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\nb.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ne.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\nl-be.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\nl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\nn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\pa-in.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\pl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\pt-br.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\pt.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ro.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ru.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\sd.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\se.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\si.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\sk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\sl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\sq.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\sr-cyrl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\sr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ss.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\sv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\sw.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ta.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\te.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\tet.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\tg.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\th.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\tl-ph.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\tlh.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\tr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\tzl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\tzm-latn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\tzm.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ug-cn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\uk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\ur.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\uz-latn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\uz.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\vi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\x-pseudo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\yo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\zh-cn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\zh-hk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\locale\zh-tw.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\min\locales.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\min\locales.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\min\moment-with-locales.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\min\moment-with-locales.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\min\moment.min.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\moment.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\check-overflow.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\date-from-array.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\from-anything.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\from-array.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\from-object.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\from-string-and-array.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\from-string-and-format.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\from-string.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\local.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\parsing-flags.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\utc.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\create\valid.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\abs.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\add-subtract.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\as.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\bubble.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\clone.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\constructor.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\create.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\duration.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\get.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\humanize.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\iso-string.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\prototype.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\duration\valid.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\format\format.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\base-config.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\calendar.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\constructor.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\en.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\formats.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\invalid.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\lists.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\locale.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\locales.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\ordinal.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\pre-post-format.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\prototype.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\relative.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\locale\set.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\add-subtract.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\calendar.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\clone.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\compare.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\constructor.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\creation-data.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\diff.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\format.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\from.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\get-set.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\locale.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\min-max.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\moment.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\now.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\prototype.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\start-end-of.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\to-type.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\to.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\moment\valid.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\parse\regex.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\parse\token.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\aliases.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\constants.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\day-of-month.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\day-of-week.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\day-of-year.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\hour.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\millisecond.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\minute.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\month.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\offset.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\priorities.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\quarter.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\second.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\timestamp.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\timezone.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\units.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\week-calendar-utils.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\week-year.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\week.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\units\year.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\abs-ceil.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\abs-floor.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\abs-round.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\compare-arrays.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\defaults.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\deprecate.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\extend.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\has-own-prop.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\hooks.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\index-of.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\is-array.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\is-date.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\is-function.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\is-number.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\is-object-empty.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\is-object.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\is-undefined.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\keys.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\map.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\mod.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\some.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\to-int.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\lib\utils\zero-fill.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\af.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ar-dz.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ar-kw.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ar-ly.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ar-ma.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ar-sa.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ar-tn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ar.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\az.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\be.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\bg.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\bm.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\bn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\bo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\br.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\bs.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ca.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\cs.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\cv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\cy.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\da.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\de-at.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\de-ch.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\de.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\dv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\el.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\en-au.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\en-ca.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\en-gb.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\en-ie.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\en-il.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\en-nz.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\en-SG.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\eo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\es-do.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\es-us.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\es.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\et.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\eu.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\fa.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\fi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\fo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\fr-ca.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\fr-ch.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\fr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\fy.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ga.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\gd.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\gl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\gom-latn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\gu.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\he.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\hi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\hr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\hu.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\hy-am.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\id.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\is.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\it-ch.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\it.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ja.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\jv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ka.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\kk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\km.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\kn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ko.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ku.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ky.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\lb.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\lo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\lt.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\lv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\me.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\mi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\mk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ml.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\mn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\mr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ms-my.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ms.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\mt.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\my.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\nb.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ne.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\nl-be.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\nl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\nn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\pa-in.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\pl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\pt-br.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\pt.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ro.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ru.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\sd.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\se.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\si.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\sk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\sl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\sq.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\sr-cyrl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\sr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ss.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\sv.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\sw.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ta.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\te.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\tet.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\tg.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\th.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\tl-ph.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\tlh.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\tr.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\tzl.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\tzm-latn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\tzm.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ug-cn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\uk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\ur.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\uz-latn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\uz.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\vi.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\x-pseudo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\yo.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\zh-cn.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\zh-hk.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\locale\zh-tw.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\src\moment.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\templates\default.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\templates\locale-header.js" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\templates\test-header.js" />
+    <Content Include="resources_constant\AdminLTE2\dist\css\AdminLTE.css" />
+    <Content Include="resources_constant\AdminLTE2\dist\css\AdminLTE.min.css" />
+    <Content Include="resources_constant\AdminLTE2\dist\js\adminlte.js" />
+    <Content Include="resources_constant\AdminLTE2\dist\js\adminlte.min.js" />
+    <Content Include="resources_constant\css\alertify\alertify.css" />
+    <Content Include="resources_constant\css\alertify\alertify.min.css" />
+    <Content Include="resources_constant\css\alertify\alertify.rtl.css" />
+    <Content Include="resources_constant\css\alertify\alertify.rtl.min.css" />
+    <Content Include="resources_constant\css\alertify\themes\bootstrap.css" />
+    <Content Include="resources_constant\css\alertify\themes\bootstrap.min.css" />
+    <Content Include="resources_constant\css\alertify\themes\bootstrap.rtl.css" />
+    <Content Include="resources_constant\css\alertify\themes\bootstrap.rtl.min.css" />
+    <Content Include="resources_constant\css\alertify\themes\default.css" />
+    <Content Include="resources_constant\css\alertify\themes\default.min.css" />
+    <Content Include="resources_constant\css\alertify\themes\default.rtl.css" />
+    <Content Include="resources_constant\css\alertify\themes\default.rtl.min.css" />
+    <Content Include="resources_constant\css\alertify\themes\semantic.css" />
+    <Content Include="resources_constant\css\alertify\themes\semantic.min.css" />
+    <Content Include="resources_constant\css\alertify\themes\semantic.rtl.css" />
+    <Content Include="resources_constant\css\alertify\themes\semantic.rtl.min.css" />
+    <Content Include="resources_constant\css\bootstrap-switch\bootstrap-switch.css" />
+    <Content Include="resources_constant\css\bootstrap-switch\bootstrap-switch.min.css" />
+    <Content Include="resources_constant\css\bootstrapvalidator\bootstrapValidator.css" />
+    <Content Include="resources_constant\css\bootstrapvalidator\bootstrapValidator.min.css" />
+    <Content Include="resources_constant\css\bootstrap\bootstrap-theme.css" />
+    <Content Include="resources_constant\css\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="resources_constant\css\bootstrap\bootstrap.css" />
+    <Content Include="resources_constant\css\bootstrap\bootstrap.min.css" />
+    <Content Include="resources_constant\css\bootstrap\equal-height-columns.css" />
+    <Content Include="resources_constant\css\fontawesome\css\brands.css" />
+    <Content Include="resources_constant\css\fontawesome\css\brands.min.css" />
+    <Content Include="resources_constant\css\fontawesome\css\fontawesome.css" />
+    <Content Include="resources_constant\css\fontawesome\css\fontawesome.min.css" />
+    <Content Include="resources_constant\css\fontawesome\css\solid.css" />
+    <Content Include="resources_constant\css\fontawesome\css\solid.min.css" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="resources_constant\css\jquery-timepicker\jquery.timepicker.css" />
+    <Content Include="resources_constant\css\jquery-timepicker\jquery.timepicker.min.css" />
+    <Content Include="resources_constant\css\loading\app.css" />
+    <Content Include="resources_constant\css\loading\app.min.css" />
+    <Content Include="resources_constant\css\select2\select2-bootstrap.css" />
+    <Content Include="resources_constant\css\select2\select2.css" />
+    <Content Include="resources_constant\css\select2\select2.min.css" />
+    <Content Include="resources_constant\googlemap\markerclusterer.js" />
+    <Content Include="resources_constant\images\00_Login-bg.jpg" />
+    <Content Include="resources_constant\images\01_Libra.png" />
+    <Content Include="resources_constant\images\googlemap\conv30.png" />
+    <Content Include="resources_constant\images\googlemap\conv40.png" />
+    <Content Include="resources_constant\images\googlemap\conv50.png" />
+    <Content Include="resources_constant\images\googlemap\heart30.png" />
+    <Content Include="resources_constant\images\googlemap\heart40.png" />
+    <Content Include="resources_constant\images\googlemap\heart50.png" />
+    <Content Include="resources_constant\images\googlemap\m1.png" />
+    <Content Include="resources_constant\images\googlemap\m2.png" />
+    <Content Include="resources_constant\images\googlemap\m3.png" />
+    <Content Include="resources_constant\images\googlemap\m4.png" />
+    <Content Include="resources_constant\images\googlemap\m5.png" />
+    <Content Include="resources_constant\images\googlemap\people35.png" />
+    <Content Include="resources_constant\images\googlemap\people45.png" />
+    <Content Include="resources_constant\images\googlemap\people55.png" />
+    <Content Include="resources_constant\images\googlemap\pin.png" />
+    <Content Include="resources_constant\images\icon\01.png" />
+    <Content Include="resources_constant\images\icon\02.png" />
+    <Content Include="resources_constant\images\icon\03.png" />
+    <Content Include="resources_constant\images\icon\04.png" />
+    <Content Include="resources_constant\images\icon\05.png" />
+    <Content Include="resources_constant\images\icon\06.png" />
+    <Content Include="resources_constant\images\icon\07.png" />
+    <Content Include="resources_constant\images\icon\08.png" />
+    <Content Include="resources_constant\images\icon\09.png" />
+    <Content Include="resources_constant\images\icon\10.png" />
+    <Content Include="resources_constant\images\icon\11.png" />
+    <Content Include="resources_constant\images\icon\12.png" />
+    <Content Include="resources_constant\images\icon\13.png" />
+    <Content Include="resources_constant\images\icon\14.png" />
+    <Content Include="resources_constant\images\icon\15.png" />
+    <Content Include="resources_constant\images\logo.png" />
+    <Content Include="resources_constant\images\user.png" />
+    <Content Include="resources_constant\images\_justice.png" />
+    <Content Include="resources_constant\images\_password.png" />
+    <Content Include="resources_constant\images\_user.png" />
+    <Content Include="resources_constant\js\alertify\alertify.js" />
+    <Content Include="resources_constant\js\alertify\alertify.min.js" />
+    <Content Include="resources_constant\js\bootstrap-switch\bootstrap-switch.js" />
+    <Content Include="resources_constant\js\bootstrap-switch\bootstrap-switch.min.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\bootstrapValidator.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\bootstrapValidator.min.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\ar_MA.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\be_FR.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\be_NL.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\bg_BG.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\cs_CZ.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\da_DK.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\de_DE.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\en_US.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\es_CL.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\es_ES.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\fa_IR.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\fr_FR.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\gr_EL.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\hu_HU.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\id_ID.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\it_IT.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\ja_JP.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\nl_NL.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\no_NO.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\pl_PL.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\pt_BR.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\ro_RO.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\ru_RU.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\sr_RS.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\sv_SE.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\th_TH.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\tr_TR.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\ua_UA.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\vi_VN.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\zh_CN.js" />
+    <Content Include="resources_constant\js\bootstrapvalidator\language\zh_TW.js" />
+    <Content Include="resources_constant\js\bootstrap\bootstrap.js" />
+    <Content Include="resources_constant\js\bootstrap\bootstrap.min.js" />
+    <Content Include="map\data.json" />
+    <None Include="My Project\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="packages.config" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\.bower.json" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\.editorconfig" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\.travis.yml" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\bower.json" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\build\build.less" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\build\build3.less" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\build\build_standalone.less" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\build\build_standalone3.less" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\CHANGELOG.md" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\CODE_OF_CONDUCT.md" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\composer.json" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\CONTRIBUTING.md" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.css.map" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker3.css.map" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\events.rst" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\i18n.rst" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\index.rst" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\keyboard.rst" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\make.bat" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\Makefile" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\markup.rst" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\methods.rst" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\options.rst" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\docs\README.md" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\grunt\.jshintrc" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\.jscsrc" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\js\.jshintrc" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\less\.csslintrc" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\less\datepicker.less" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\less\datepicker3.less" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\LICENSE" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\package.json" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\README.md" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\tests\README.md" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\bootstrap-datepicker\yarn.lock" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\.bower.json" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\bower.json" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\CHANGELOG.md" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\LICENSE" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\package-lock.json" />
+    <Content Include="resources_constant\AdminLTE2\bower_components\moment\README.md" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="resources_constant\css\fontawesome\webfonts\fa-solid-900.woff2" />
+    <None Include="resources_constant\js\jquery.3.3.1\jquery-3.3.1.intellisense.js" />
+    <Content Include="resources_constant\js\jquery-timepicker\jquery.timepicker.js" />
+    <Content Include="resources_constant\js\jquery-timepicker\jquery.timepicker.min.js" />
+    <Content Include="resources_constant\js\jquery.mask\dist\jquery.mask.js" />
+    <Content Include="resources_constant\js\jquery.mask\dist\jquery.mask.min.js" />
+    <Content Include="resources_constant\js\jquery.mask\src\jquery.mask.js" />
+    <Content Include="resources_constant\js\jquery.3.3.1\jquery-3.3.1.js" />
+    <Content Include="resources_constant\js\jquery.3.3.1\jquery-3.3.1.min.js" />
+    <Content Include="resources_constant\js\jquery.3.3.1\jquery-3.3.1.slim.js" />
+    <Content Include="resources_constant\js\jquery.3.3.1\jquery-3.3.1.slim.min.js" />
+    <None Include="resources_constant\js\jquery.3.3.1\jquery.validate-vsdoc.js" />
+    <Content Include="resources_constant\js\jquery.3.3.1\jquery.validate.js" />
+    <Content Include="resources_constant\js\jquery.3.3.1\jquery.validate.min.js" />
+    <Content Include="resources_constant\js\jquery.3.3.1\jquery.validate.unobtrusive.js" />
+    <Content Include="resources_constant\js\jquery.3.3.1\jquery.validate.unobtrusive.min.js" />
+    <Content Include="resources_constant\js\jquery.ui.datepicker.validation\jquery.ui.datepicker.validation.js" />
+    <Content Include="resources_constant\js\jquery.ui.datepicker.validation\jquery.ui.datepicker.validation.min.js" />
+    <Content Include="resources_constant\js\jquery.ui.datepicker.validation\jquery.ui.datepicker.validation.pack.js" />
+    <Content Include="resources_constant\js\loading\app.js" />
+    <Content Include="resources_constant\js\loading\app.min.js" />
+    <Content Include="resources_constant\js\select2\select2.js" />
+    <Content Include="resources_constant\js\select2\select2.min.js" />
+    <Content Include="resource\css\login.css" />
+    <Content Include="resources_constant\css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="resource\css\allhome.css" />
+    <Content Include="resource\css\circle.css" />
+    <Content Include="resource\css\site.css" />
+    <Content Include="resource\js\custom.js" />
+    <Content Include="resource\js\em.js" />
+    <Content Include="resource\js\extension.js" />
+    <Content Include="resource\js\datatable.js" />
+    <Content Include="resource\js\jquery.timepicker.js" />
+    <Content Include="resource\js\jquery.timepicker.min.js" />
+    <Content Include="resource\js\default.js" />
+    <Content Include="resource\js\probationer.js" />
+    <Content Include="resource\js\prohibited_area.js" />
+    <Content Include="resource\js\select_address.js" />
+    <Content Include="resource\js\select_area.js" />
+    <Content Include="resource\js\select_department.js" />
+    <Content Include="resource\js\select_group.js" />
+    <Content Include="resource\js\select_role.js" />
+    <Content Include="resource\js\select_title.js" />
+    <Content Include="user\add_user_account.aspx" />
+    <Content Include="user\add_user_department.aspx" />
+    <Content Include="user\add_user_group.aspx" />
+    <Content Include="user\add_user_role.aspx" />
+    <Content Include="user\user_account.aspx" />
+    <Content Include="user\user_account_change_password.aspx" />
+    <Content Include="user\user_department.aspx" />
+    <Content Include="user\user_group.aspx" />
+    <Content Include="user\user_role.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="area\add_prohibited_area.aspx.designer.vb">
+      <DependentUpon>add_prohibited_area.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="area\add_prohibited_area.aspx.vb">
+      <DependentUpon>add_prohibited_area.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="area\add_prohibited_group.aspx.designer.vb">
+      <DependentUpon>add_prohibited_group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="area\add_prohibited_group.aspx.vb">
+      <DependentUpon>add_prohibited_group.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="area\prohibited_area.aspx.designer.vb">
+      <DependentUpon>prohibited_area.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="area\prohibited_area.aspx.vb">
+      <DependentUpon>prohibited_area.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="area\prohibited_group.aspx.designer.vb">
+      <DependentUpon>prohibited_group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="area\prohibited_group.aspx.vb">
+      <DependentUpon>prohibited_group.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="control\device.aspx.designer.vb">
+      <DependentUpon>device.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\device.aspx.vb">
+      <DependentUpon>device.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="control\LineNotifications.aspx.designer.vb">
+      <DependentUpon>LineNotifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\LineNotifications.aspx.vb">
+      <DependentUpon>LineNotifications.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="control\location.aspx.designer.vb">
+      <DependentUpon>location.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\location.aspx.vb">
+      <DependentUpon>location.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="control\login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="control\map.aspx.designer.vb">
+      <DependentUpon>map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\map.aspx.vb">
+      <DependentUpon>map.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="control\phohibited.aspx.designer.vb">
+      <DependentUpon>phohibited.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\phohibited.aspx.vb">
+      <DependentUpon>phohibited.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="control\probationer.aspx.designer.vb">
+      <DependentUpon>probationer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\probationer.aspx.vb">
+      <DependentUpon>probationer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="control\UploadFile.aspx.designer.vb">
+      <DependentUpon>UploadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\UploadFile.aspx.vb">
+      <DependentUpon>UploadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="control\user.aspx.designer.vb">
+      <DependentUpon>user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\user.aspx.vb">
+      <DependentUpon>user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="device\add_em_device.aspx.designer.vb">
+      <DependentUpon>add_em_device.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="device\add_em_device.aspx.vb">
+      <DependentUpon>add_em_device.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="device\em_device.aspx.designer.vb">
+      <DependentUpon>em_device.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="device\em_device.aspx.vb">
+      <DependentUpon>em_device.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="home\allhome.aspx.designer.vb">
+      <DependentUpon>allhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home\allhome.aspx.vb">
+      <DependentUpon>allhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="location\add_district.aspx.designer.vb">
+      <DependentUpon>add_district.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="location\add_district.aspx.vb">
+      <DependentUpon>add_district.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="location\add_province.aspx.designer.vb">
+      <DependentUpon>add_province.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="location\add_province.aspx.vb">
+      <DependentUpon>add_province.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="location\add_subdistrict.aspx.designer.vb">
+      <DependentUpon>add_subdistrict.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="location\add_subdistrict.aspx.vb">
+      <DependentUpon>add_subdistrict.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="location\district.aspx.designer.vb">
+      <DependentUpon>district.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="location\district.aspx.vb">
+      <DependentUpon>district.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="location\province.aspx.designer.vb">
+      <DependentUpon>province.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="location\province.aspx.vb">
+      <DependentUpon>province.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="location\subdistrict.aspx.designer.vb">
+      <DependentUpon>subdistrict.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="location\subdistrict.aspx.vb">
+      <DependentUpon>subdistrict.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="map\map.aspx.designer.vb">
+      <DependentUpon>map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="map\map.aspx.vb">
+      <DependentUpon>map.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.vb">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.vb">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="probationer\add_probationer.aspx.designer.vb">
+      <DependentUpon>add_probationer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="probationer\add_probationer.aspx.vb">
+      <DependentUpon>add_probationer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="probationer\probationer.aspx.designer.vb">
+      <DependentUpon>probationer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="probationer\probationer.aspx.vb">
+      <DependentUpon>probationer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="report\report_breaking_rules.aspx.designer.vb">
+      <DependentUpon>report_breaking_rules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\report_breaking_rules.aspx.vb">
+      <DependentUpon>report_breaking_rules.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="report\report_em.aspx.designer.vb">
+      <DependentUpon>report_em.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\report_em.aspx.vb">
+      <DependentUpon>report_em.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="report\report_em_status.aspx.designer.vb">
+      <DependentUpon>report_em_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\report_em_status.aspx.vb">
+      <DependentUpon>report_em_status.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="report\report_notification.aspx.designer.vb">
+      <DependentUpon>report_notification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\report_notification.aspx.vb">
+      <DependentUpon>report_notification.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="report\report_probationer_details.aspx.designer.vb">
+      <DependentUpon>report_probationer_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\report_probationer_details.aspx.vb">
+      <DependentUpon>report_probationer_details.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="report\report_tracking.aspx.designer.vb">
+      <DependentUpon>report_tracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\report_tracking.aspx.vb">
+      <DependentUpon>report_tracking.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="report\report_user_access.aspx.designer.vb">
+      <DependentUpon>report_user_access.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\report_user_access.aspx.vb">
+      <DependentUpon>report_user_access.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="user\add_user_account.aspx.designer.vb">
+      <DependentUpon>add_user_account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\add_user_account.aspx.vb">
+      <DependentUpon>add_user_account.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="user\add_user_department.aspx.designer.vb">
+      <DependentUpon>add_user_department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\add_user_department.aspx.vb">
+      <DependentUpon>add_user_department.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="user\add_user_group.aspx.designer.vb">
+      <DependentUpon>add_user_group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\add_user_group.aspx.vb">
+      <DependentUpon>add_user_group.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="user\add_user_role.aspx.designer.vb">
+      <DependentUpon>add_user_role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\add_user_role.aspx.vb">
+      <DependentUpon>add_user_role.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="user\user_account.aspx.designer.vb">
+      <DependentUpon>user_account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\user_account.aspx.vb">
+      <DependentUpon>user_account.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="user\user_account_change_password.aspx.designer.vb">
+      <DependentUpon>user_account_change_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\user_account_change_password.aspx.vb">
+      <DependentUpon>user_account_change_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\user_department.aspx.designer.vb">
+      <DependentUpon>user_department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\user_department.aspx.vb">
+      <DependentUpon>user_department.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="user\user_group.aspx.designer.vb">
+      <DependentUpon>user_group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\user_group.aspx.vb">
+      <DependentUpon>user_group.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="user\user_role.aspx.designer.vb">
+      <DependentUpon>user_role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\user_role.aspx.vb">
+      <DependentUpon>user_role.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="resources_constant\js\jquery.3.3.1\jquery-3.3.1.min.map" />
+    <Content Include="resources_constant\js\jquery.3.3.1\jquery-3.3.1.slim.min.map" />
+    <Content Include="resources_constant\css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="resources_constant\css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="resources_constant\css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="resources_constant\css\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="em\" />
+    <Folder Include="resources_constant\images\UploadImg\" />
+    <Folder Include="secuire\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\nsEngine\nsEngine.vbproj">
+      <Project>{C58F8E6F-CAFB-4DBE-A84A-548E7B665A21}</Project>
+      <Name>nsEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="resources_constant\AdminLTE2\bower_components\moment\moment.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57454</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57454/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

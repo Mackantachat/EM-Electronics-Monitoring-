@@ -1,0 +1,258 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MasterPage.master.vb" Inherits="EM.MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM - ศาลอาญา</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="resources_constant/images/logo.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="resources_constant/images/logo.png" />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Sarabun'>
+    <link rel="stylesheet" href="/resources_constant/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="/resources_constant/AdminLTE2/dist/css/AdminLTE.css" />
+    <link rel="stylesheet" href="/resources_constant/css/fontawesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="/resources_constant/css/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="/resources_constant/css/fontawesome/css/solid.css">
+    <link rel="stylesheet" href="/resources_constant/css/alertify/alertify.rtl.css">
+    <link rel="stylesheet" href="/resources_constant/css/alertify/themes/default.rtl.css" />
+    <link rel="stylesheet" href="/resource/css/site.css" />
+    <link rel="stylesheet" href="/resource/css/circle.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <div id="topContent">
+            <header class="main-header">
+                <a href="#" class="logo">
+                    <span class="logo-mini">
+                        <img src="/resources_constant/images/user.png">
+                    </span>
+                    <span class="logo-lg">
+                        <span class="text-white">Administrator</span>
+                    </span>
+                </a>
+                <nav class="navbar navbar-static-top">
+                    <a href="#" class="sidebar-toggle text-white" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown notifications-menu">
+                                <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown">
+                                    <i class="fas fa-bell"></i>
+                                    <span class="label label-danger">5</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="header">You have 5 notifications</li>
+                                    <li>
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-users text-aqua"></i>5 new members joined today
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-warning text-yellow"></i>Very long description here that may not fit into the
+                                                page and may cause design problems
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-users text-red"></i>5 new members joined
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-shopping-cart text-green"></i>25 sales made
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-user text-red"></i>You changed your username
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="footer"><a href="#">View all</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown top-signout">
+                                <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown">
+                                    <i class="fas fa-unlock"></i><span>ออกจากระบบ</span>
+                                </a>
+                            </li>
+                            <li class="dropdown notifications-menu"  style="width: 100px;">
+                                <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown">
+                                    <span>&nbsp;TH</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <ul class="menu">
+                                            <li><a href="#">TH</a></li>
+                                            <li><a href="#">EN</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div id="leftContent">
+            <aside class="main-sidebar">
+                <section class="sidebar">
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class="sm-main-list">
+                            <a href="/home/allhome.aspx">
+                                <i class="fas fa-chart-bar"></i><span>ภาพรวม</span>
+                            </a>
+                        </li>
+                        <li class="treeview sm-main-list">
+                            <a href="#">
+                                <i class="fa fa-users"></i><span>ผู้ถูกคุมความประพฤติ</span>
+                                <span class="pull-right-container">
+                                    <i class="fas fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/probationer/probationer"><i class="fas fa-angle-right"></i>รายชื่อผู้ถูกคุมการประพฤติ</a></li>
+                            </ul>
+                        </li>
+                        <li class="sm-main-list">
+                            <a href="/device/em_device">
+                                <i class="fas fa-cog"></i><span>อุปกรณ์ EM</span>
+                            </a>
+                        </li>
+                        <li class="sm-main-list">
+                            <a href="/map/map">
+                                <i class="fas fa-map-marked-alt"></i><span>ติดตามผู้ถูกคุม</span>
+                            </a>
+                        </li>
+                        <li class="treeview sm-main-list">
+                            <a href="#">
+                                <i class="fas fa-exclamation-triangle"></i><span>พื้นที่หวงห้าม</span>
+                                <span class="pull-right-container">
+                                    <i class="fas fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/area/prohibited_area"><i class="fas fa-angle-right"></i>รายการพื้นที่หวงห้าม</a></li>
+                                <li><a href="/area/prohibited_group"><i class="fas fa-angle-right"></i>กลุ่มพื้นที่หวงห้าม</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview sm-main-list">
+                            <a href="#">
+                                <i class="fas fa-file-alt"></i><span>รายงาน</span>
+                                <span class="pull-right-container">
+                                    <i class="fas fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/report/report_user_access"><i class="fas fa-angle-right"></i>การเข้าใช้งานระบบ</a></li>
+                                <li><a href="/report/report_tracking"><i class="fas fa-angle-right"></i>การเคลือนไหวผู้ถูกคุมประพฤติ</a></li>
+                                <li><a href="/report/report_breaking_rules"><i class="fas fa-angle-right"></i>การกระทำผิด</a></li>
+                                <li><a href="/report/report_probationer_details"><i class="fas fa-angle-right"></i>รายละเอียดผู้ถูกคุมประพฤติ</a></li>
+                                <li><a href="/report/report_notification"><i class="fas fa-angle-right"></i>การแจ้งเตือน</a></li>
+                                <li><a href="/report/report_em"><i class="fas fa-angle-right"></i>ตำแหน่งอุปกรณ์</a></li>
+                                <li><a href="/report/report_em_status"><i class="fas fa-angle-right"></i>สถานะอุปกรณ์</a></li>
+                            </ul>
+                        </li>
+                        <li class="sm-main-list">
+                            <a href="/">
+                                <i class="fas fa-question-circle"></i><span>แจ้งปัญหา</span>
+                            </a>
+                        </li>
+                        <li class="treeview sm-main-list">
+                            <a href="#">
+                                <i class="fas fa-book"></i><span>คู่มือการใช้งาน</span>
+                                <span class="pull-right-container">
+                                    <i class="fas fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/"><i class="fas fa-angle-right"></i>ระบบติดตามตัวอิเล็กทรอนิกส์</a></li>
+                                <li><a href="/"><i class="fas fa-angle-right"></i>อุปกรณ์ติดตามตัวอิเล็กทรอนิกส์</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="header"><b>เจ้าหน้าที่</b></li>
+                        <li class="treeview sm-main-list">
+                            <a href="/">
+                                <i class="fa fa-users"></i><span>ข้อมูลผู้ใช้งาน</span>
+                                <span class="pull-right-container">
+                                    <i class="fas fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/user/user_account"><i class="fas fa-angle-right"></i>บัญชีผู้ใช้งาน</a></li>
+                                <li><a href="/user/user_department"><i class="fas fa-angle-right"></i>หน่วยงาน</a></li>
+                                <li><a href="/user/user_group"><i class="fas fa-angle-right"></i>กลุ่มผู้ใช้งาน</a></li>
+                                <li><a href="/user/user_role"><i class="fas fa-angle-right"></i>สิทธิผู้ใช้งาน</a></li>
+                                <li><a href="/user/user_role"><i class="fas fa-angle-right"></i>กำหนดสิทธิผู้ใช้งาน</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview sm-main-list">
+                            <a href="/">
+                                <i class="fa fa-users"></i><span>ข้อมูลสถานที่</span>
+                                <span class="pull-right-container">
+                                    <i class="fas fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/location/province"><i class="fas fa-angle-right"></i>ข้อมูลจังหวัด</a></li>
+                                <li><a href="/location/district"><i class="fas fa-angle-right"></i>ข้อมูลอำเภอ</a></li>
+                                <li><a href="/location/subdistrict"><i class="fas fa-angle-right"></i>ข้อมูลตำบล</a></li>
+                            </ul>
+                        </li>
+                        <li class="sm-main-list bottom-signout">
+                            <a href="#">
+                                <i class="fa fa-gear"></i><span>ออกจากระบบ</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </section>
+            </aside>
+        </div>
+        <div id="mainContent">
+            <div class="content-wrapper">
+                <section class="content">
+                    <div class="row">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="footerContent">
+            <div class="form-group">
+                <h6 class="footerright">
+                    <b>version 1.0.0</b>
+                    <br />
+                    System development by Nippon SySits Co.,Ltd
+                </h6>
+            </div>
+        </div>
+    </div>
+    <script src="/resources_constant/js/jquery.3.3.1/jquery-3.3.1.js"></script>
+    <script src="/resources_constant/js/bootstrap/bootstrap.js"></script>
+    <script src="/resources_constant/AdminLTE2/dist/js/adminlte.js"></script>
+    <script src="/resources_constant/js/alertify/alertify.js"></script>
+    <script src="/resources_constant/js/loading/app.min.js"></script>
+    <script src="/resources_constant/js/loading/app.js"></script>
+    <script src="/resource/js/extension.js"></script>
+    <script src="/resource/js/em.js"></script>
+    <script>
+        $(function () {
+            em_function();
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="JsContent" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>
